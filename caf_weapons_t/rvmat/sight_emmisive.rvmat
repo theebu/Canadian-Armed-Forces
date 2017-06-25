@@ -1,0 +1,21 @@
+class StageTI
+{
+	texture="a3\data_f\default_ti_ca.paa";
+};
+ambient[]={0.12900044,0.12900044,0.12900044,1};
+diffuse[]={0.12900044,0.12900044,0.12900044,1};
+forcedDiffuse[]={0,0,0,0};
+emmisive[]={0,100,50,1};
+specular[]={0,0,0,0};
+specularPower=0;
+renderFlags[]=
+{
+	"NoAlphaWrite"
+};
+PixelShaderID="Normal";
+VertexShaderID="Basic";
+class Stage0
+{
+	texture="caf_equip_t\tex\c79_sight_emissive.paa";
+	uvSource="tex";
+};

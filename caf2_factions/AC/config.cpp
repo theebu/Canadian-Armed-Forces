@@ -1,0 +1,979 @@
+
+#include "cfgGroupsAC.hpp"
+
+enum {
+	DESTRUCTENGINE = 2,
+	DESTRUCTDEFAULT = 6,
+	DESTRUCTWRECK = 7,
+	DESTRUCTTREE = 3,
+	DESTRUCTTENT = 4,
+	STABILIZEDINAXISX = 1,
+	STABILIZEDINAXESXYZ = 4,
+	STABILIZEDINAXISY = 2,
+	STABILIZEDINAXESBOTH = 3,
+	DESTRUCTNO = 0,
+	STABILIZEDINAXESNONE = 0,
+	DESTRUCTMAN = 5,
+	DESTRUCTBUILDING = 1,
+};
+
+class DefaultEventhandlers;	// External class reference
+
+
+class CfgPatches
+{
+	class caf_inf_ac
+	{
+		units[] = {"CAF_RIFLEMAN_ac","CAF_GRENADIER_ac","CAF_C9GUNNER_ac","CAF_SECTIONIC_ac","CAF_SECTION2IC_ac","CAF_C6GUNNER_ac","CAF_84GUNNER_ac","CAF_RIFLEMAN_AT","CAF_MEDIC_ac","CAF_OFFICER_ac","CAF_SNIPER_ac","CAF_SPOTTER_ac","CAF_VEHTECH_ac","CAF_CBTENGINEER_ac","CAF_GPMGASST_ac","CAF_ATASST_ac","CAF_CREWMAN_ac","CAF_RECCE_IC_ac","CAF_RECCE_2IC_ac","CAF_RECCE_C9_ac","CAF_RECCE_SIG"};
+		weapons[] = {};
+		requiredVersion = 0.1;
+		requiredAddons[] = {};
+	};
+};
+
+class CfgVehicles
+{
+
+	class CAF_Soldier01_ac;
+
+	
+	class CAF_RIFLEMAN_ac : CAF_Soldier01_ac {
+	
+			
+		
+		_generalMacro = "CAF_RIFLEMAN_ac";
+		scope = 2;
+		faction = CAF_AC;
+		
+		author = "CAF MOD TEAM";
+		displayName = "Rifleman";
+		uniformClass = "U_CAF_uniform1_cadpatAC";
+		hiddenSelections[] = {"Camo"};
+		hiddenSelectionsTextures[] = {"\caf_equip_t\tex\ia_soldier_01_ac_co.paa"};
+		weapons[] = {
+		"CAF_C7A2", 
+		"CAF_M72A6", 
+		"Throw", 
+		"Put"
+		};
+		respawnWeapons[] = {
+		"CAF_C7A2", 
+		"CAF_M72A6", 
+		"Throw", 
+		"Put"
+		};
+		Items[] = {
+		"H_Watchcap_khk"
+		};
+		RespawnItems[] = {
+		"H_Watchcap_khk"
+		};
+		magazines[] = {
+		
+		
+		//Ammunition
+		"30Rnd_556x45_NATO",
+		"30Rnd_556x45_NATO",
+		"30Rnd_556x45_NATO",
+		"30Rnd_556x45_NATO",
+		"30Rnd_556x45_NATO",
+		"30Rnd_556x45_NATO",
+		"30Rnd_556x45_NATO",
+		"30Rnd_556x45_NATO",
+		"30Rnd_556x45_NATO",
+		"30Rnd_556x45_NATO", 
+		"SmokeShell", 
+		"SmokeShell", 
+		"HandGrenade", 
+		"HandGrenade"
+		
+		};
+		respawnMagazines[] = {
+		
+		
+		//Ammunition
+		"30Rnd_556x45_NATO",
+		"30Rnd_556x45_NATO",
+		"30Rnd_556x45_NATO",
+		"30Rnd_556x45_NATO",
+		"30Rnd_556x45_NATO",
+		"30Rnd_556x45_NATO",
+		"30Rnd_556x45_NATO",
+		"30Rnd_556x45_NATO",
+		"30Rnd_556x45_NATO",
+		"30Rnd_556x45_NATO", 
+		"SmokeShell", 
+		"SmokeShell", 
+		"HandGrenade", 
+		"HandGrenade"
+		
+		};
+		linkedItems[] = {
+		"V_CAF_TTMAV_RIFLEMAN_tw", 
+		"H_CAF_CG634_tw", 
+		"caf_MNVG", 
+		"ItemMap", 
+		"ItemCompass", 
+		"ItemWatch", 
+		"ItemRadio"
+		};
+		respawnLinkedItems[] = {
+		"V_CAF_TTMAV_RIFLEMAN_tw", 
+		"H_CAF_CG634_tw", 
+		"caf_MNVG", 
+		"ItemMap", 
+		"ItemCompass", 
+		"ItemWatch", 
+		"ItemRadio"
+		};
+	
+	
+	};
+
+	class CAF_MARKSMAN_ac : CAF_RIFLEMAN_ac {
+		_generalMacro = "CAF_MARKSMAN_ac";
+		scope = 2;
+		faction = CAF_AC;
+		
+		displayName = "Marksman";
+		weapons[] = {
+		"CAF_ac10t", 
+		"Throw", 
+		"Put"
+		};
+		respawnWeapons[] = {
+		"CAF_ac10t", 
+		"Throw", 
+		"Put"
+		};
+		Items[] = {
+		"H_Watchcap_khk"
+		};
+		RespawnItems[] = {
+		"H_Watchcap_khk"
+		};
+		magazines[] = {
+		
+		
+		//Ammunition
+		"20Rnd_762x51_Mag",
+		"20Rnd_762x51_Mag",
+		"20Rnd_762x51_Mag",
+		"20Rnd_762x51_Mag",
+		"20Rnd_762x51_Mag",
+		"20Rnd_762x51_Mag",
+		"20Rnd_762x51_Mag",
+		"20Rnd_762x51_Mag",
+		"20Rnd_762x51_Mag",
+		"20Rnd_762x51_Mag",
+		"SmokeShell", 
+		"SmokeShell", 
+		"HandGrenade", 
+		"HandGrenade"
+		
+		};
+		respawnMagazines[] = {
+		
+		
+		//Ammunition
+		"20Rnd_762x51_Mag",
+		"20Rnd_762x51_Mag",
+		"20Rnd_762x51_Mag",
+		"20Rnd_762x51_Mag",
+		"20Rnd_762x51_Mag",
+		"20Rnd_762x51_Mag",
+		"20Rnd_762x51_Mag",
+		"20Rnd_762x51_Mag",
+		"20Rnd_762x51_Mag",
+		"20Rnd_762x51_Mag",
+		"SmokeShell", 
+		"SmokeShell", 
+		"HandGrenade", 
+		"HandGrenade"
+		
+		};
+		linkedItems[] = {
+		"V_CAF_TTMAV_MARKSMAN_tw", 
+		"H_CAF_CG634_NET_tw", 
+		"caf_MNVG", 
+		"ItemMap", 
+		"ItemCompass", 
+		"ItemWatch", 
+		"ItemRadio"
+		};
+		respawnLinkedItems[] = {
+		"V_CAF_TTMAV_MARKSMAN_tw", 
+		"H_CAF_CG634_NET_tw", 
+		"caf_MNVG", 
+		"ItemMap", 
+		"ItemCompass", 
+		"ItemWatch", 
+		"ItemRadio"
+		};
+	};
+
+	class CAF_GRENADIER_ac : CAF_Soldier01_ac {
+	
+		scope = 2;
+		faction = CAF_AC;
+		
+		_generalMacro = "CAF_GRENADIER_ac";
+		displayName = "Grenadier";
+		weapons[] = {"CAF_C8A3_M203", "Throw", "Put"};
+		respawnWeapons[] = {"CAF_C8A3_M203","Throw", "Put"};
+		Items[] = {
+		"H_Watchcap_khk"
+		};
+		RespawnItems[] = {
+		"H_Watchcap_khk"
+		};
+		magazines[] = {
+		
+		
+		//Grenades
+		
+		"SmokeShell", 
+		"SmokeShell", 
+		"HandGrenade", 
+		"HandGrenade",
+		
+		//Ammunition
+		
+		"30Rnd_556x45_NATO",
+		"30Rnd_556x45_NATO",
+		"30Rnd_556x45_NATO",
+		"30Rnd_556x45_NATO",
+		"30Rnd_556x45_NATO",
+		"30Rnd_556x45_NATO",
+		"30Rnd_556x45_NATO",
+		"30Rnd_556x45_NATO",
+		"30Rnd_556x45_NATO",
+		"30Rnd_556x45_NATO", 
+		"1Rnd_HE_Grenade_shell",
+		"1Rnd_HE_Grenade_shell",
+		"1Rnd_HE_Grenade_shell",
+		"1Rnd_HE_Grenade_shell",
+		"1Rnd_HE_Grenade_shell",
+		"1Rnd_HE_Grenade_shell",
+		"1Rnd_HE_Grenade_shell",
+		"1Rnd_HE_Grenade_shell"
+		};
+		respawnMagazines[] = {
+		
+		
+		//Grenades
+		
+		"SmokeShell", 
+		"SmokeShell", 
+		"HandGrenade", 
+		"HandGrenade",
+		
+		//Ammunition
+		
+		"30Rnd_556x45_NATO",
+		"30Rnd_556x45_NATO",
+		"30Rnd_556x45_NATO",
+		"30Rnd_556x45_NATO",
+		"30Rnd_556x45_NATO",
+		"30Rnd_556x45_NATO",
+		"30Rnd_556x45_NATO",
+		"30Rnd_556x45_NATO",
+		"30Rnd_556x45_NATO",
+		"30Rnd_556x45_NATO", 
+		"1Rnd_HE_Grenade_shell",
+		"1Rnd_HE_Grenade_shell",
+		"1Rnd_HE_Grenade_shell",
+		"1Rnd_HE_Grenade_shell",
+		"1Rnd_HE_Grenade_shell",
+		"1Rnd_HE_Grenade_shell",
+		"1Rnd_HE_Grenade_shell",
+		"1Rnd_HE_Grenade_shell"
+		
+		};
+		linkedItems[] = {
+		"V_CAF_TTMAV_GRENADIER_tw", 
+		"H_CAF_CG634_tw_G_U", 
+		"caf_MNVG", 
+		"ItemMap", 
+		"ItemCompass", 
+		"ItemWatch", 
+		"ItemRadio"
+		};
+		respawnLinkedItems[] = {
+		"V_CAF_TTMAV_GRENADIER_tw", 
+		"H_CAF_CG634_NET_tw_G_U", 
+		"caf_MNVG",
+		"ItemMap", 
+		"ItemCompass", 
+		"ItemWatch", 
+		"ItemRadio"
+		};
+		
+	};
+	
+	class CAF_C9GUNNER_ac : CAF_Soldier01_ac {
+	
+		scope = 2;
+		faction = CAF_AC;
+		
+		_generalMacro = "CAF_C9GUNNER_ac";
+		displayName = "C9 Gunner";
+		icon = "iconManMG";
+		weapons[] = {
+		"CAF_C9A2", 
+		"Throw", 
+		"Put"
+		};
+		respawnWeapons[] = {
+		"CAF_C9A2", 
+		"Throw", 
+		"Put"
+		};
+		Items[] = {
+		"H_Watchcap_khk"
+		};
+		RespawnItems[] = {
+		"H_Watchcap_khk"
+		};
+		magazines[] = {
+		
+		
+		//Grenades
+		
+		"SmokeShell", 
+		"SmokeShell", 
+		"HandGrenade", 
+		"HandGrenade",
+		
+		//Ammunition
+		"200Rnd_556x45_belt",
+		"200Rnd_556x45_belt",
+		"200Rnd_556x45_belt"
+		};
+		respawnMagazines[] = {
+		
+		
+		//Grenades
+		
+		"SmokeShell", 
+		"SmokeShell", 
+		"HandGrenade", 
+		"HandGrenade",
+		
+		//Ammunition
+		"200Rnd_556x45_belt",
+		"200Rnd_556x45_belt",
+		"200Rnd_556x45_belt"
+		};
+		linkedItems[] = {
+		"V_CAF_TTMAV_GUNNER_tw", 
+		"H_CAF_CG634_NET_tw_G_U", 
+		"caf_MNVG", 
+		"ItemMap", 
+		"ItemCompass", 
+		"ItemWatch", 
+		"ItemRadio"
+		};
+		respawnLinkedItems[] = {
+		"V_CAF_TTMAV_GUNNER_tw", 
+		"H_CAF_CG634_NET_tw_G_U", 
+		"caf_MNVG",
+		"ItemMap", 
+		"ItemCompass", 
+		"ItemWatch", 
+		"ItemRadio"
+		};
+		
+	};
+	
+	class CAF_C6GUNNER_ac : CAF_Soldier01_ac {
+	
+		scope = 2;
+		faction = CAF_AC;
+		
+		_generalMacro = "CAF_C6GUNNER_ac";
+		displayName = "C6 Gunner";
+		icon = "iconManMG";
+		weapons[] = {
+		"CAF_C6GPMG", 
+		"Throw", 
+		"Put"
+		};
+		respawnWeapons[] = {
+		"CAF_C6GPMG", 
+		"Throw", 
+		"Put"
+		};
+		Items[] = {
+		"H_Watchcap_khk"
+		};
+		RespawnItems[] = {
+		"H_Watchcap_khk"
+		};
+		magazines[] = {
+		
+		
+		//Grenades
+		
+		"SmokeShell", 
+		"SmokeShell", 
+		"HandGrenade", 
+		"HandGrenade",
+		
+		//Ammunition
+		"220Rnd_762x51_belt",
+		"220Rnd_762x51_belt",
+		"220Rnd_762x51_belt"
+		};
+		respawnMagazines[] = {
+		
+		
+		//Grenades
+		
+		"SmokeShell", 
+		"SmokeShell", 
+		"HandGrenade", 
+		"HandGrenade",
+		
+		//Ammunition
+		"220Rnd_762x51_belt",
+		"220Rnd_762x51_belt",
+		"220Rnd_762x51_belt"
+		};
+		linkedItems[] = {
+		"V_CAF_TTMAV_GUNNER_tw", 
+		"H_CAF_CG634_tw_G_U", 
+		"caf_MNVG", 
+		"ItemMap", 
+		"ItemCompass", 
+		"ItemWatch", 
+		"ItemRadio"
+		};
+		respawnLinkedItems[] = {
+		"V_CAF_TTMAV_GUNNER_tw", 
+		"H_CAF_CG634_tw_G_U", 
+		"caf_MNVG",
+		"ItemMap", 
+		"ItemCompass", 
+		"ItemWatch", 
+		"ItemRadio"
+		};
+		
+	};
+	
+	class CAF_OFFICER_ac : CAF_Soldier01_ac {
+	
+		scope = 2;
+		faction = CAF_AC;
+		
+		_generalMacro = "CAF_OFFICER_ac";
+		displayName = "Officer";
+		icon = "iconManLeader";
+		//picture = "caf_core\characters\army\data\ui\icon_seccomd_ca.paa";
+		weapons[] = {
+		"CAF_C8A3",
+		"Throw",
+		"Put", 
+		"LASERDESIGNATOR"
+		};
+		respawnWeapons[] = {
+		"CAF_C8A3",
+		"Throw",
+		"Put",
+		"LASERDESIGNATOR"
+		};
+		
+		Items[] = {
+		"H_Watchcap_khk"
+		};
+		RespawnItems[] = {
+		"H_Watchcap_khk"
+		};
+		magazines[] = {
+		
+		"LASERBATTERIES",
+		
+		
+		
+		//Ammunition
+		"30Rnd_556x45_NATO",
+		"30Rnd_556x45_NATO",
+		"30Rnd_556x45_NATO",
+		"30Rnd_556x45_NATO",
+		"30Rnd_556x45_NATO",
+		"30Rnd_556x45_NATO",
+		"30Rnd_556x45_NATO",
+		"30Rnd_556x45_NATO",
+		"30Rnd_556x45_NATO",
+		"30Rnd_556x45_NATO", 
+		"SmokeShell", 
+		"SmokeShell", 
+		"HandGrenade", 
+		"HandGrenade"
+		
+		};
+		respawnMagazines[] = {
+		
+		"LASERBATTERIES",
+		
+		
+		
+		//Ammunition
+		"30Rnd_556x45_NATO",
+		"30Rnd_556x45_NATO",
+		"30Rnd_556x45_NATO",
+		"30Rnd_556x45_NATO",
+		"30Rnd_556x45_NATO",
+		"30Rnd_556x45_NATO",
+		"30Rnd_556x45_NATO",
+		"30Rnd_556x45_NATO",
+		"30Rnd_556x45_NATO",
+		"30Rnd_556x45_NATO", 
+		"SmokeShell", 
+		"SmokeShell", 
+		"HandGrenade", 
+		"HandGrenade"
+		
+		};
+		linkedItems[] = {
+		"V_CAF_TTMAV_LEADER_tw", 
+		"H_CAF_CG634_tw_G_U", 
+		"caf_MNVG",
+		"ItemMap", 
+		"ItemCompass", 
+		"ItemWatch", 
+		"ItemRadio"
+		};
+		respawnLinkedItems[] = {
+		"V_CAF_TTMAV_LEADER_tw", 
+		"H_CAF_CG634_tw_G_U", 
+		"caf_MNVG",
+		"ItemMap", 
+		"ItemCompass", 
+		"ItemWatch", 
+		"ItemRadio"
+		};
+	};
+	
+	class CAF_SECTIONIC_ac : CAF_Soldier01_ac {
+	
+		scope = 2;
+		faction = CAF_AC;
+		
+		_generalMacro = "CAF_SECTIONIC_ac";
+		displayName = "Section Commander";
+		icon = "iconManLeader";
+		//picture = "caf_core\characters\army\data\ui\icon_seccomd_ca.paa";
+		weapons[] = {
+		"CAF_C8A3",
+		"Throw",
+		"Put", 
+		"rangefinder"
+		};
+		respawnWeapons[] = {
+		"CAF_C8A3",
+		"Throw",
+		"Put",
+		"rangefinder"
+		};
+		
+		Items[] = {
+		"H_Watchcap_khk"
+		};
+		RespawnItems[] = {
+		"H_Watchcap_khk"
+		};
+		magazines[] = {
+		
+		
+		//Ammunition
+		"30Rnd_556x45_NATO",
+		"30Rnd_556x45_NATO",
+		"30Rnd_556x45_NATO",
+		"30Rnd_556x45_NATO",
+		"30Rnd_556x45_NATO",
+		"30Rnd_556x45_NATO",
+		"30Rnd_556x45_NATO",
+		"30Rnd_556x45_NATO",
+		"30Rnd_556x45_NATO",
+		"30Rnd_556x45_NATO", 
+		"SmokeShell", 
+		"SmokeShell", 
+		"HandGrenade", 
+		"HandGrenade"
+		
+		};
+		respawnMagazines[] = {
+		
+		
+		//Ammunition
+		"30Rnd_556x45_NATO",
+		"30Rnd_556x45_NATO",
+		"30Rnd_556x45_NATO",
+		"30Rnd_556x45_NATO",
+		"30Rnd_556x45_NATO",
+		"30Rnd_556x45_NATO",
+		"30Rnd_556x45_NATO",
+		"30Rnd_556x45_NATO",
+		"30Rnd_556x45_NATO",
+		"30Rnd_556x45_NATO", 
+		"SmokeShell", 
+		"SmokeShell", 
+		"HandGrenade", 
+		"HandGrenade"
+		
+		};
+		linkedItems[] = {
+		"V_CAF_TTMAV_LEADER_tw", 
+		"H_CAF_CG634_tw", 
+		"caf_MNVG",
+		"ItemMap", 
+		"ItemCompass", 
+		"ItemWatch", 
+		"ItemRadio"
+		};
+		respawnLinkedItems[] = {
+		"V_CAF_TTMAV_LEADER_tw", 
+		"H_CAF_CG634_tw", 
+		"caf_MNVG",
+		"ItemMap", 
+		"ItemCompass", 
+		"ItemWatch", 
+		"ItemRadio"
+		};
+	};
+	
+	class CAF_SECTION2IC_ac : CAF_Soldier01_ac {
+	
+		_generalMacro = "CAF_SECTION2IC_ac";
+		scope = 2;
+		faction = CAF_AC;
+		
+		displayName = "Section 2IC";
+		icon = "iconManLeader";
+		//picture = "caf_core\characters\army\data\ui\icon_2IC_ca.paa";
+		weapons[] = {
+		"CAF_C8A3",
+		"Throw",
+		"Put", 
+		"rangefinder"
+		};
+		respawnWeapons[] = {
+		"CAF_C8A3",
+		"Throw",
+		"Put",
+		"rangefinder"
+		};
+		
+		Items[] = {
+		"H_Watchcap_khk"
+		};
+		RespawnItems[] = {
+		"H_Watchcap_khk"
+		};
+		magazines[] = {
+		
+		
+		//Ammunition
+		"30Rnd_556x45_NATO",
+		"30Rnd_556x45_NATO",
+		"30Rnd_556x45_NATO",
+		"30Rnd_556x45_NATO",
+		"30Rnd_556x45_NATO",
+		"30Rnd_556x45_NATO",
+		"30Rnd_556x45_NATO",
+		"30Rnd_556x45_NATO",
+		"30Rnd_556x45_NATO",
+		"30Rnd_556x45_NATO", 
+		"SmokeShell", 
+		"SmokeShell", 
+		"HandGrenade", 
+		"HandGrenade"
+		
+		};
+		respawnMagazines[] = {
+		
+		
+		//Ammunition
+		"30Rnd_556x45_NATO",
+		"30Rnd_556x45_NATO",
+		"30Rnd_556x45_NATO",
+		"30Rnd_556x45_NATO",
+		"30Rnd_556x45_NATO",
+		"30Rnd_556x45_NATO",
+		"30Rnd_556x45_NATO",
+		"30Rnd_556x45_NATO",
+		"30Rnd_556x45_NATO",
+		"30Rnd_556x45_NATO", 
+		"SmokeShell", 
+		"SmokeShell", 
+		"HandGrenade", 
+		"HandGrenade"
+		
+		};
+		linkedItems[] = {
+		"V_CAF_TTMAV_RIFLEMAN_tw", 
+		"H_CAF_CG634_tw", 
+		"caf_MNVG",
+		"ItemMap", 
+		"ItemCompass", 
+		"ItemWatch", 
+		"ItemRadio"
+		};
+		respawnLinkedItems[] = {
+		"V_CAF_TTMAV_RIFLEMAN_tw", 
+		"H_CAF_CG634_tw", 
+		"caf_MNVG",
+		"ItemMap", 
+		"ItemCompass", 
+		"ItemWatch", 
+		"ItemRadio"
+		};
+	};
+	
+	class CAF_84GUNNER_ac : CAF_Soldier01_ac {
+	
+			
+		
+		_generalMacro = "84GUNNER";
+		scope = 2;
+		faction = CAF_AC;
+		
+		author = "CAF MOD TEAM";
+		displayName = "84 Gunner";
+		uniformClass = "U_CAF_uniform1_cadpatAC";
+		backpack = "B_caf_84_AmmoBag_HEAT";
+		hiddenSelections[] = {"Camo"};
+		hiddenSelectionsTextures[] = {"\caf_equip_t\tex\ia_soldier_01_ac_co.paa"};
+		weapons[] = {
+		"CAF_C8A3", 
+		"CAF_M3CG", 
+		"Throw", 
+		"Put"
+		};
+		respawnWeapons[] = {
+		"CAF_C8A3", 
+		"CAF_M3CG",
+		"Throw", 
+		"Put"
+		};
+		Items[] = {
+		"H_Watchcap_khk"
+		};
+		RespawnItems[] = {
+		"H_Watchcap_khk"
+		};
+		magazines[] = {
+		
+		
+		//Ammunition
+		"FFV551_HEAT",
+		"30Rnd_556x45_NATO",
+		"30Rnd_556x45_NATO",
+		"30Rnd_556x45_NATO",
+		"30Rnd_556x45_NATO",
+		"30Rnd_556x45_NATO",
+		"30Rnd_556x45_NATO",
+		"30Rnd_556x45_NATO",
+		"30Rnd_556x45_NATO",
+		"30Rnd_556x45_NATO",
+		"30Rnd_556x45_NATO", 
+		"SmokeShell", 
+		"SmokeShell", 
+		"HandGrenade", 
+		"HandGrenade"
+		
+		};
+		respawnMagazines[] = {
+		
+		
+		//Ammunition
+		"FFV551_HEAT",
+		"30Rnd_556x45_NATO",
+		"30Rnd_556x45_NATO",
+		"30Rnd_556x45_NATO",
+		"30Rnd_556x45_NATO",
+		"30Rnd_556x45_NATO",
+		"30Rnd_556x45_NATO",
+		"30Rnd_556x45_NATO",
+		"30Rnd_556x45_NATO",
+		"30Rnd_556x45_NATO",
+		"30Rnd_556x45_NATO", 
+		"SmokeShell", 
+		"SmokeShell", 
+		"HandGrenade", 
+		"HandGrenade"
+		
+		};
+		linkedItems[] = {
+		"V_CAF_TTMAV_RIFLEMAN_tw", 
+		"H_CAF_CG634_tw", 
+		"caf_MNVG", 
+		"ItemMap", 
+		"ItemCompass", 
+		"ItemWatch", 
+		"ItemRadio"
+		};
+		respawnLinkedItems[] = {
+		"V_CAF_TTMAV_RIFLEMAN_tw", 
+		"H_CAF_CG634_tw", 
+		"caf_MNVG", 
+		"ItemMap", 
+		"ItemCompass", 
+		"ItemWatch", 
+		"ItemRadio"
+		};
+	
+	
+	};
+
+	
+	
+	class CAF_MEDIC_ac : CAF_Soldier01_ac {
+	
+			
+		
+		_generalMacro = "CAF_MEDIC_ac";
+		scope = 2;
+		faction = CAF_AC;
+		
+		author = "CAF MOD TEAM";
+		displayName = "Medic";
+		uniformClass = "U_CAF_uniform1_cadpatAC";
+		backpack = "B_CAF_Carryall_Medical_tw";
+		hiddenSelections[] = {"Camo"};
+		hiddenSelectionsTextures[] = {"\caf_equip_t\tex\ia_soldier_01_ac_co.paa"};
+		weapons[] = {
+		"CAF_C8A3", 
+		"Throw", 
+		"Put"
+		};
+		respawnWeapons[] = {
+		"CAF_C8A3", 
+		"Throw", 
+		"Put"
+		};
+		Items[] = {
+		"H_Watchcap_khk"
+		};
+		RespawnItems[] = {
+		"H_Watchcap_khk"
+		};
+		magazines[] = {
+		
+		
+		//Ammunition
+		"30Rnd_556x45_NATO",
+		"30Rnd_556x45_NATO",
+		"30Rnd_556x45_NATO",
+		"30Rnd_556x45_NATO",
+		"30Rnd_556x45_NATO",
+		"30Rnd_556x45_NATO",
+		"30Rnd_556x45_NATO",
+		"30Rnd_556x45_NATO",
+		"30Rnd_556x45_NATO",
+		"30Rnd_556x45_NATO", 
+		"SmokeShell", 
+		"SmokeShell"
+		
+		};
+		respawnMagazines[] = {
+		
+		
+		//Ammunition
+		"30Rnd_556x45_NATO",
+		"30Rnd_556x45_NATO",
+		"30Rnd_556x45_NATO",
+		"30Rnd_556x45_NATO",
+		"30Rnd_556x45_NATO",
+		"30Rnd_556x45_NATO",
+		"30Rnd_556x45_NATO",
+		"30Rnd_556x45_NATO",
+		"30Rnd_556x45_NATO",
+		"30Rnd_556x45_NATO", 
+		"SmokeShell", 
+		"SmokeShell"
+		
+		};
+		linkedItems[] = {
+		"V_CAF_TTMAV_MEDIC_tw", 
+		"H_CAF_CG634_tw", 
+		"caf_MNVG", 
+		"ItemMap", 
+		"ItemCompass", 
+		"ItemWatch", 
+		"ItemRadio"
+		};
+		respawnLinkedItems[] = {
+		"V_CAF_TTMAV_MEDIC_tw", 
+		"H_CAF_CG634_tw", 
+		"caf_MNVG", 
+		"ItemMap", 
+		"ItemCompass", 
+		"ItemWatch", 
+		"ItemRadio"
+		};
+	
+	
+	};
+	
+	class CAF_CREWMAN_ac : CAF_Soldier01_ac {
+	
+			
+		
+		_generalMacro = "CAF_CREWMAN_ac";
+		scope = 2;
+		faction = CAF_TW;
+		engineer = 1;
+		author = "CAF MOD TEAM";
+		displayName = "Crewman";
+		uniformClass = "U_CAF_uniform1_cadpatAC";
+		hiddenSelections[] = {"Camo"};
+		hiddenSelectionsTextures[] = {"\caf_equip_t\tex\ia_soldier_01_ac_co.paa"};
+		weapons[] = {
+		"Throw", 
+		"Put"
+		};
+		respawnWeapons[] = {
+		"Throw", 
+		"Put"
+		};
+		Items[] = {
+		};
+		RespawnItems[] = {
+		};
+		magazines[] = {
+		
+		
+		//Ammunition
+		
+		};
+		respawnMagazines[] = {
+		
+		
+		//Ammunition
+		
+		};
+		linkedItems[] = {
+		"V_CAF_FragVest_TW", 
+		"H_CAF_CREWHELMET", 
+		"caf_MNVG", 
+		"ItemMap", 
+		"ItemCompass", 
+		"ItemWatch", 
+		"ItemRadio"
+		};
+		respawnLinkedItems[] = {
+		"V_CAF_FragVest_TW", 
+		"H_CAF_CREWHELMET", 
+		"caf_MNVG", 
+		"ItemMap", 
+		"ItemCompass", 
+		"ItemWatch", 
+		"ItemRadio"
+		};
+	
+	
+	};
+	
+	};

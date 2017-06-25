@@ -1,0 +1,95 @@
+ambient[] = {1.0, 1.0, 1.0, 1.0};
+diffuse[] = {1.0, 1.0, 1.0, 1.0};
+forcedDiffuse[] = {0.0, 0.0, 0.0, 1.0};
+emmisive[] = {0.0, 0.0, 0.0, 1.0};
+specular[] = {0.4, 0.4, 0.4, 1.0};
+specularPower = 16.0;
+PixelShaderID = "Super";
+VertexShaderID = "Super";
+
+class Stage1 {
+	texture = "FRL_missilebox\FRL_moab\nohq\moab_galvanized_nohq.paa";
+	uvSource = "tex";
+	
+	class uvTransform {
+		aside[] = {1.0, 0.0, 0.0};
+		up[] = {0.0, 1.0, 0.0};
+		dir[] = {0.0, 0.0, 0.0};
+		pos[] = {0.0, 0.0, 0.0};
+	};
+};
+
+class Stage2 {
+	texture = "#(argb,8,8,3)color(1,1,1,0,DT)";
+	uvSource = "tex";
+	
+	class uvTransform {
+		aside[] = {2.0, 0.0, 0.0};
+		up[] = {0.0, 1.0, 0.0};
+		dir[] = {0.0, 0.0, 0.0};
+		pos[] = {0.0, 0.0, 0.0};
+	};
+};
+
+class Stage3 {
+	texture = "FRL_missilebox\FRL_moab\tex\damage_metal_basicarmor_mc.paa";
+	uvSource = "tex";
+	
+	class uvTransform {
+		aside[] = {1.0, 0.0, 0.0};
+		up[] = {0.0, 1.0, 0.0};
+		dir[] = {0.0, 0.0, 0.0};
+		pos[] = {0.0, 0.0, 0.0};
+	};
+};
+
+class Stage4 {
+	texture = "#(argb,8,8,3)color(1,1,1,1,AS)";
+	uvSource = "tex";
+	
+	class uvTransform {
+		aside[] = {1.0, 0.0, 0.0};
+		up[] = {0.0, 1.0, 0.0};
+		dir[] = {0.0, 0.0, 0.0};
+		pos[] = {0.0, 0.0, 0.0};
+	};
+};
+
+class Stage5 {
+	texture = "FRL_missilebox\FRL_moab\tex\vehicle_destr2048_2048_smdi.paa";
+	uvSource = "tex";
+	
+	class uvTransform {
+		aside[] = {1.0, 0.0, 0.0};
+		up[] = {0.0, 1.0, 0.0};
+		dir[] = {0.0, 0.0, 0.0};
+		pos[] = {0.0, 0.0, 0.0};
+	};
+};
+
+class Stage6 {
+	texture = "#(ai,64,64,1)fresnel(0.3,0.85)";
+	uvSource = "tex";
+	
+	class uvTransform {
+		aside[] = {1.0, 0.0, 0.0};
+		up[] = {0.0, 1.0, 0.0};
+		dir[] = {0.0, 0.0, 0.0};
+		pos[] = {0.0, 0.0, 0.0};
+	};
+};
+
+class Stage7 {
+	texture = "FRL_missilebox\tex\env_land_co.paa";
+	uvSource = "tex";
+	
+	class uvTransform {
+		aside[] = {1.0, 0.0, 0.0};
+		up[] = {0.0, 1.0, 0.0};
+		dir[] = {0.0, 0.0, 0.0};
+		pos[] = {0.0, 0.0, 0.0};
+	};
+};
+class StageTI {
+	texture = "FRL_missilebox\tex\default_ti_ca.paa";
+};

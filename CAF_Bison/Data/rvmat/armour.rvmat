@@ -1,0 +1,12 @@
+////////////////////////////////////////////////////////////////////
+//DeRap: Produced from mikero's Dos Tools Dll version 3.91
+//http://dev-heaven.net/projects/list_files/mikero-pbodll
+////////////////////////////////////////////////////////////////////
+
+#define _ARMA_
+
+//Class P:/CAF_Bison/Data/armour.rvmat{
+surfaceInfo = "CAF_Bison\Data\rvmat\armour.bisurf";
+diffuse[] = {1.0,0.5,0.5,1.0};
+ambient[] = {1.0,0.5,0.5,1.0};
+//};
